@@ -1,9 +1,18 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.awt.*;
+import java.io.CharArrayReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class kiosk {
+
+   Product[] cart = new Product[10];
     Scanner scan = new Scanner(System.in);
+
+
     public void showMainMenu(){
         System.out.println("[ SHAKESHACK MENU ]");
         System.out.println("1.Burgers       | 앵거스 비프 통살을 다져 만든 버거");
@@ -29,6 +38,11 @@ public class kiosk {
         }
         int choice = scan.nextInt();
 
+
+       cart[0] = new Product(Burger[choice].getName(),Burger[choice].getPrice(),Burger[choice].getExplain());
+        System.out.println(cart[0]);
+        return ;
+
     }
  public void showIceCreamMenu() {
         Product[] iceCream = new Product[3];
@@ -44,6 +58,8 @@ public class kiosk {
         }
 
      int choice = scan.nextInt();
+     cart[1] = new Product(iceCream[choice].getName(),iceCream[choice].getPrice(),iceCream[choice].getExplain());
+        return ;
     }
  public void showDrinkMenu() {
         Product[] Drink = new Product[3];
@@ -59,6 +75,8 @@ public class kiosk {
         }
 
      int choice = scan.nextInt();
+     cart[2] = new Product(Drink[choice].getName(),Drink[choice].getPrice(),Drink[choice].getExplain());
+        return;
     }
  public void showBeerMenu() {
         Product[] Beer = new Product[3];
@@ -73,6 +91,8 @@ public class kiosk {
             System.out.println(Beer[i].getName() + " | " + Beer[i].getPrice() + " | " + Beer[i].getExplain());
         }
      int choice = scan.nextInt();
+     cart[3] = new Product(Beer[choice].getName(),Beer[choice].getPrice(),Beer[choice].getExplain());
+     return ;
     }
 
     void choiceCart(Product p ){
@@ -82,15 +102,13 @@ public class kiosk {
     }
     public void showOrderMenu(){
         System.out.println("[ Orders ]");
+        for (int i = 0; i < cart.length; i++) {
+            System.out.println((cart[i].toString()));
 
+        }
         System.out.println("1.주문하기       |       2.메인메뉴로 돌아가기");
 
-        int choice = scan.nextInt();
-        if (choice == 1){
-            //최종주문 메서드
-        } else if (choice == 2) {
-            Order();
-        }
+
     }
 public void showOrderCancel(){
     System.out.println("주문을 취소 하시겠습니까?");
@@ -111,7 +129,6 @@ public void showOrderCancel(){
 
             if (menuNumber == 1) {
                     showBurgerMenu();
-
             } else if (menuNumber == 2) {
                 showIceCreamMenu();
             } else if (menuNumber == 3) {
@@ -127,4 +144,3 @@ public void showOrderCancel(){
         }
 
     }
-
