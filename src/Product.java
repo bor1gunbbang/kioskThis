@@ -6,6 +6,11 @@ public class Product extends Menu {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+            return name + " | " + price + " | " + explain;
+    }
+
     public Product() {
 
     }

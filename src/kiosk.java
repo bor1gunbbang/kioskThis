@@ -9,9 +9,15 @@ import java.util.Scanner;
 
 public class kiosk {
 
-   Product[] cart = new Product[10];
+//Product[] cart = new Product[4];
+    ArrayList<Product> cart = new ArrayList<>();
+//   public void cart (String name , double price , String explain){
+//       cart.add(name);
+//       cart.add(price);
+//       cart.add(explain);
+//   }
     Scanner scan = new Scanner(System.in);
-
+Product p = new Product();
 
     public void showMainMenu(){
         System.out.println("[ SHAKESHACK MENU ]");
@@ -33,18 +39,51 @@ public class kiosk {
 
         System.out.println("다음 메뉴 중에서 고르시오  ");
 
-        for (int i = 0; i <Burger.length ; i++) {
-            System.out.println(Burger[i].getName() + " | " + Burger[i].getPrice() + " | " + Burger[i].getExplain());
-        }
+        for (int i = 0; i <Burger.length ; i++) { System.out.println(i+1 +". "+Burger[i].getName() + " | " + Burger[i].getPrice() + " | " + Burger[i].getExplain());}
+
+        System.out.println("123 중 하나를 선택하세요");
         int choice = scan.nextInt();
+        if (choice == 1 ){
+//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+            cart.add(Burger[choice-1]);
+            System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }else if (choice == 2 ){
+//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+            cart.add(Burger[choice-1]);
+            System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }else if (choice == 3 ){
+//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+            cart.add(Burger[choice-1]);
+            System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }
 
-
-       cart[0] = new Product(Burger[choice].getName(),Burger[choice].getPrice(),Burger[choice].getExplain());
-        System.out.println(cart[0]);
         return ;
 
     }
- public void showIceCreamMenu() {
+
+
+    public void showIceCreamMenu() {
         Product[] iceCream = new Product[3];
         iceCream[0] = new Product("아이스크림1",1.5,"첫번째 메뉴");
         iceCream[1] = new Product("아이스크림2",2.0,"두번째 메뉴");
@@ -57,8 +96,44 @@ public class kiosk {
             System.out.println(iceCream[i].getName() + " | " + iceCream[i].getPrice() + " | " + iceCream[i].getExplain());
         }
 
-     int choice = scan.nextInt();
-     cart[1] = new Product(iceCream[choice].getName(),iceCream[choice].getPrice(),iceCream[choice].getExplain());
+        System.out.println("123 중 하나를 선택하세요");
+        int choice = scan.nextInt();
+        if (choice == 1 ){
+//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+            cart.add(iceCream[choice-1]);
+            System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }else if (choice == 2 ){
+//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+            cart.add(iceCream[choice-1]);
+            System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }else if (choice == 3 ){
+//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+            cart.add(iceCream[choice-1]);
+            System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println("더 주문하러가기 ");
+            System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+            if (backMenu  == 1){
+                Order();
+            }else if (backMenu == 2){
+                showOrderMenu();
+            }
+        }
+
+
         return ;
     }
  public void showDrinkMenu() {
@@ -74,9 +149,45 @@ public class kiosk {
             System.out.println(Drink[i].getName() + " | " + Drink[i].getPrice() + " | " + Drink[i].getExplain());
         }
 
+     System.out.println("123 중 하나를 선택하세요");
      int choice = scan.nextInt();
-     cart[2] = new Product(Drink[choice].getName(),Drink[choice].getPrice(),Drink[choice].getExplain());
-        return;
+     if (choice == 1 ){
+//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
+         cart.add(Drink[choice-1]);
+         System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }else if (choice == 2 ){
+//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
+         cart.add(Drink[choice-1]);
+         System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }else if (choice == 3 ){
+//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
+         cart.add(Drink[choice-1]);
+         System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }
+
+
+     return ;
     }
  public void showBeerMenu() {
         Product[] Beer = new Product[3];
@@ -90,23 +201,57 @@ public class kiosk {
         for (int i = 0; i <Beer.length ; i++) {
             System.out.println(Beer[i].getName() + " | " + Beer[i].getPrice() + " | " + Beer[i].getExplain());
         }
+     System.out.println("123 중 하나를 선택하세요");
      int choice = scan.nextInt();
-     cart[3] = new Product(Beer[choice].getName(),Beer[choice].getPrice(),Beer[choice].getExplain());
+     if (choice == 1 ){
+//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
+         cart.add(Beer[choice-1]);
+         System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }else if (choice == 2 ){
+//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
+         cart.add(Beer[choice-1]);
+         System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }else if (choice == 3 ){
+//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
+         cart.add(Beer[choice-1]);
+         System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+         System.out.println("더 주문하러가기 ");
+         System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
+         if (backMenu  == 1){
+             Order();
+         }else if (backMenu == 2){
+             showOrderMenu();
+         }
+     }
+
+
      return ;
     }
 
-    void choiceCart(Product p ){
-       int sum = 0;
-       sum += 1;
-
-    }
     public void showOrderMenu(){
+        double sum =0;
         System.out.println("[ Orders ]");
-        for (int i = 0; i < cart.length; i++) {
-            System.out.println((cart[i].toString()));
+        for (int i = 0; i < cart.size(); i++) {
+            System.out.println(cart.get(i).toString());
 
+             sum += cart.get(i).getPrice();
         }
-        System.out.println("1.주문하기       |       2.메인메뉴로 돌아가기");
+        System.out.println("[Total] :: " + sum +"원" );
+        System.out.println("1.결제하기       |       2.메인메뉴로 돌아가기");
 
 
     }
@@ -139,6 +284,9 @@ public void showOrderCancel(){
                 showOrderMenu();
             }else if (menuNumber == 6){
                 showOrderCancel();
+
+            }else if (menuNumber == 99){
+                break;
             }
         }
         }
