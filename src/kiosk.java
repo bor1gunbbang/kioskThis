@@ -8,14 +8,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class kiosk {
+int count  = 0;
 
-//Product[] cart = new Product[4];
     ArrayList<Product> cart = new ArrayList<>();
-//   public void cart (String name , double price , String explain){
-//       cart.add(name);
-//       cart.add(price);
-//       cart.add(explain);
-//   }
+
     Scanner scan = new Scanner(System.in);
 Product p = new Product();
 
@@ -44,7 +40,7 @@ Product p = new Product();
         System.out.println("123 중 하나를 선택하세요");
         int choice = scan.nextInt();
         if (choice == 1 ){
-//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+
             cart.add(Burger[choice-1]);
             System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
@@ -55,7 +51,7 @@ Product p = new Product();
                 showOrderMenu();
             }
         }else if (choice == 2 ){
-//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+
             cart.add(Burger[choice-1]);
             System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
@@ -66,7 +62,7 @@ Product p = new Product();
                 showOrderMenu();
             }
         }else if (choice == 3 ){
-//            cart[0] = new Product(Burger[choice-1].getName(),Burger[choice-1].getPrice(),Burger[choice-1].getExplain());
+
             cart.add(Burger[choice-1]);
             System.out.println(Burger[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
@@ -99,9 +95,9 @@ Product p = new Product();
         System.out.println("123 중 하나를 선택하세요");
         int choice = scan.nextInt();
         if (choice == 1 ){
-//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+
             cart.add(iceCream[choice-1]);
-            System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
+            System.out.println(iceCream[choice-1].getName()+"이/(가) 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
             System.out.print("1.을 입력하면 처음화면으로 돌아갑니다. 2.를 입력하면 장바구니로 이동합니다.>__"); int backMenu = scan.nextInt();
             if (backMenu  == 1){
@@ -110,7 +106,7 @@ Product p = new Product();
                 showOrderMenu();
             }
         }else if (choice == 2 ){
-//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+
             cart.add(iceCream[choice-1]);
             System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
@@ -121,7 +117,7 @@ Product p = new Product();
                 showOrderMenu();
             }
         }else if (choice == 3 ){
-//            cart[1] = new Product(iceCream[choice-1].getName(),iceCream[choice-1].getPrice(),iceCream[choice-1].getExplain());
+
             cart.add(iceCream[choice-1]);
             System.out.println(iceCream[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
             System.out.println("더 주문하러가기 ");
@@ -152,7 +148,7 @@ Product p = new Product();
      System.out.println("123 중 하나를 선택하세요");
      int choice = scan.nextInt();
      if (choice == 1 ){
-//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
+
          cart.add(Drink[choice-1]);
          System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -163,7 +159,7 @@ Product p = new Product();
              showOrderMenu();
          }
      }else if (choice == 2 ){
-//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
+
          cart.add(Drink[choice-1]);
          System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -174,7 +170,6 @@ Product p = new Product();
              showOrderMenu();
          }
      }else if (choice == 3 ){
-//         cart[2] = new Product(Drink[choice-1].getName(),Drink[choice-1].getPrice(),Drink[choice-1].getExplain());
          cart.add(Drink[choice-1]);
          System.out.println(Drink[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -204,7 +199,6 @@ Product p = new Product();
      System.out.println("123 중 하나를 선택하세요");
      int choice = scan.nextInt();
      if (choice == 1 ){
-//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
          cart.add(Beer[choice-1]);
          System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -215,7 +209,6 @@ Product p = new Product();
              showOrderMenu();
          }
      }else if (choice == 2 ){
-//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
          cart.add(Beer[choice-1]);
          System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -226,7 +219,6 @@ Product p = new Product();
              showOrderMenu();
          }
      }else if (choice == 3 ){
-//         cart[3] = new Product(Beer[choice-1].getName(),Beer[choice-1].getPrice(),Beer[choice-1].getExplain());
          cart.add(Beer[choice-1]);
          System.out.println(Beer[choice-1].getName()+"이가 장바구니에 추가되었습니다.");
          System.out.println("더 주문하러가기 ");
@@ -245,6 +237,7 @@ Product p = new Product();
     public void showOrderMenu(){
         double sum =0;
         System.out.println("[ Orders ]");
+
         for (int i = 0; i < cart.size(); i++) {
             System.out.println(cart.get(i).toString());
 
@@ -252,7 +245,24 @@ Product p = new Product();
         }
         System.out.println("[Total] :: " + sum +"원" );
         System.out.println("1.결제하기       |       2.메인메뉴로 돌아가기");
+        int orDerMn = scan.nextInt();
+        if (orDerMn == 1){
+            System.out.println("주문이 완료 되었습니다!");
+            count += 1;
+            System.out.println("대기번호는 [" + count + "] 입니다. ");
 
+            try {
+                System.out.println("3초 후에 처음 화면으로 돌아갑니다. ");
+                System.out.println("해당 주문이 완료 되었으므로 장바구니가 초기화 됩니다.");
+                cart.clear();
+                Thread.sleep(3000);
+
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            Order();
+
+        }
 
     }
 public void showOrderCancel(){
@@ -260,7 +270,8 @@ public void showOrderCancel(){
     System.out.println("1.취소하기       |       2.계속주문하기");
     int choice = scan.nextInt();
     if (choice == 1){
-        //장바구니 비우기메서드
+        cart.clear();
+        count -= 1;
     } else if (choice==2) {
         Order();
     }
@@ -273,7 +284,7 @@ public void showOrderCancel(){
             int menuNumber  = scan.nextInt();
 
             if (menuNumber == 1) {
-                    showBurgerMenu();
+                showBurgerMenu();
             } else if (menuNumber == 2) {
                 showIceCreamMenu();
             } else if (menuNumber == 3) {
@@ -285,8 +296,8 @@ public void showOrderCancel(){
             }else if (menuNumber == 6){
                 showOrderCancel();
 
-            }else if (menuNumber == 99){
-                break;
+            }else {
+                System.out.println("1~6사이의 숫자만을 입력해주세요.");
             }
         }
         }
