@@ -2,13 +2,13 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.awt.*;
 import java.io.CharArrayReader;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
-import java.util.Scanner;
 
 public class kiosk {
 int count  = 0;
+double sum =0;
+double totalsum = 0;
 
     ArrayList<Product> cart = new ArrayList<>();
 
@@ -235,13 +235,13 @@ Product p = new Product();
     }
 
     public void showOrderMenu(){
-        double sum =0;
+
+
         System.out.println("[ Orders ]");
 
         for (int i = 0; i < cart.size(); i++) {
             System.out.println(cart.get(i).toString());
-
-             sum += cart.get(i).getPrice();
+            sum += cart.get(i).getPrice();
         }
         System.out.println("[Total] :: " + sum +"원" );
         System.out.println("1.결제하기       |       2.메인메뉴로 돌아가기");
@@ -250,6 +250,9 @@ Product p = new Product();
             System.out.println("주문이 완료 되었습니다!");
             count += 1;
             System.out.println("대기번호는 [" + count + "] 입니다. ");
+           totalsum  += sum;
+
+           sum =0;
 
             try {
                 System.out.println("3초 후에 처음 화면으로 돌아갑니다. ");
@@ -272,10 +275,16 @@ public void showOrderCancel(){
     if (choice == 1){
         cart.clear();
         count -= 1;
+        sum =0;
     } else if (choice==2) {
         Order();
     }
 
+}
+
+public void totalSum(){
+    System.out.println("총 판매금액 현황");
+    System.out.println("현재 까지 총 판매된 금액은 |" + totalsum+ "| 입니다.");
 }
 
     public void Order(){
@@ -296,7 +305,10 @@ public void showOrderCancel(){
             }else if (menuNumber == 6){
                 showOrderCancel();
 
-            }else {
+            }else if(menuNumber ==0){
+                totalSum();
+            }
+            else {
                 System.out.println("1~6사이의 숫자만을 입력해주세요.");
             }
         }
